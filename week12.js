@@ -10,7 +10,6 @@ class Plant {
 
 
 
-
 class PlantService {
     static url = 'https://640d4b41b07afc3b0daaeb4e.mockapi.io/plants';
 
@@ -183,8 +182,9 @@ class DOMManager {
             $(`#${plant.id}`).find('.card-body').append(
                 `
                 <p>
-                <span id="name-${plant.id}"><strong>Name: </strong> ${plant.daystoharvest}</span>
-                <span id="area-${plant.id}"><strong>Area: </strong> ${plant.season}</span>
+                <span id="area-${plant.id}"><strong>Planting Season: </strong> ${plant.season}</span><br>
+                <span id="name-${plant.id}"><strong>Days Till Harvest: </strong> ${plant.daystoharvest}</span><br>
+                
                 <button class="btn btn-danger" onclick="DOMManager.deletePlanting('${plant.id}','${plant.id}')">Delete Planting Data</button>`
 
             );
